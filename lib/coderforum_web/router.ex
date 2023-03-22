@@ -12,6 +12,7 @@ defmodule CoderforumWeb.Router do
     pipe_through :api
 
     resources "/users", CoderforumWeb.UsersController, only: [:create, :show, :delete, :update]
+    get "/", CoderforumWeb.WelcomeController, :index
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
